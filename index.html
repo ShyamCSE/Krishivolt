@@ -134,6 +134,7 @@
                     <a href="#solutions" class="text-gray-700 hover:text-green-500 transition-colors">Solutions</a>
                     <a href="#technology" class="text-gray-700 hover:text-green-500 transition-colors">Technology</a>
                     <a href="#about" class="text-gray-700 hover:text-green-500 transition-colors">About</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-green-500 transition-colors">Gallery</a>
                     <a href="#contact" class="text-gray-700 hover:text-green-500 transition-colors">Contact</a>
                 </div>
 
@@ -157,7 +158,8 @@
 
     <!-- Hero Section -->
     <section id="home" class="min-h-screen hero-gradient relative overflow-hidden">
-        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-green-900/60 via-green-800/50 to-green-600/40"></div>
+        <div class="absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-position: center; opacity: 0.3;"></div>
         
         <!-- Floating Elements -->
         <div class="absolute top-20 left-10 floating-animation">
@@ -220,26 +222,25 @@
                 <!-- Image/Illustration -->
                 <div class="relative fade-in-up" style="animation-delay: 0.3s;">
                     <div class="relative">
-                        <!-- Farmer silhouette with tablet -->
-                        <div class="w-96 h-96 mx-auto relative">
-                            <div class="absolute inset-0 bg-gradient-to-br from-green-400 to-green-600 rounded-full opacity-20 pulse-ring"></div>
-                            <div class="absolute inset-8 bg-white bg-opacity-10 rounded-full flex items-center justify-center backdrop-filter backdrop-blur-sm">
-                                <i class="fas fa-tablet-alt text-white text-6xl"></i>
-                            </div>
+                        <!-- Main hero image -->
+                        <div class="w-full h-96 mx-auto relative">
+                            <div class="absolute inset-0 bg-gradient-to-br from-green-400/20 to-green-600/20 rounded-2xl backdrop-blur-sm"></div>
+                            <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Smart Farming Technology" class="w-full h-full object-cover rounded-2xl shadow-2xl">
+                            <div class="absolute inset-0 bg-gradient-to-t from-green-900/40 via-transparent to-transparent rounded-2xl"></div>
                         </div>
 
-                        <!-- Floating tech icons -->
-                        <div class="absolute -top-4 -right-4 tech-card rounded-lg p-4">
-                            <i class="fas fa-wifi text-white text-2xl"></i>
+                        <!-- Floating tech cards with images -->
+                        <div class="absolute -top-4 -right-4 tech-card rounded-lg p-3 w-20 h-20">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Drone Technology" class="w-full h-full object-cover rounded">
                         </div>
-                        <div class="absolute -bottom-4 -left-4 tech-card rounded-lg p-4">
-                            <i class="fas fa-cloud text-white text-2xl"></i>
+                        <div class="absolute -bottom-4 -left-4 tech-card rounded-lg p-3 w-20 h-20">
+                            <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="IoT Sensors" class="w-full h-full object-cover rounded">
                         </div>
-                        <div class="absolute top-1/2 -left-8 tech-card rounded-lg p-4">
-                            <i class="fas fa-chart-line text-white text-2xl"></i>
+                        <div class="absolute top-1/2 -left-8 tech-card rounded-lg p-3 w-20 h-20">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Data Analytics" class="w-full h-full object-cover rounded">
                         </div>
-                        <div class="absolute top-1/2 -right-8 tech-card rounded-lg p-4">
-                            <i class="fas fa-satellite text-white text-2xl"></i>
+                        <div class="absolute top-1/2 -right-8 tech-card rounded-lg p-3 w-20 h-20">
+                            <img src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Satellite Technology" class="w-full h-full object-cover rounded">
                         </div>
                     </div>
                 </div>
@@ -374,11 +375,19 @@
                 </div>
 
                 <div class="relative fade-in-up" style="animation-delay: 0.3s;">
-                    <div class="w-full h-96 bg-white bg-opacity-10 rounded-2xl backdrop-filter backdrop-blur-sm flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <i class="fas fa-cogs text-8xl text-green-300 mb-6"></i>
-                            <h3 class="text-2xl font-bold mb-4">Integrated Technology Stack</h3>
-                            <p class="text-green-100">All our technologies work seamlessly together to provide comprehensive farm management solutions.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Dashboard Preview -->
+                        <div class="bg-white bg-opacity-10 rounded-2xl backdrop-filter backdrop-blur-sm p-4 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Farm Management Dashboard" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold text-white mb-2">Smart Dashboard</h3>
+                            <p class="text-green-100 text-sm">Real-time farm monitoring and analytics</p>
+                        </div>
+                        
+                        <!-- Technology Integration -->
+                        <div class="bg-white bg-opacity-10 rounded-2xl backdrop-filter backdrop-blur-sm p-4 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Integrated Technology" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold text-white mb-2">AI Integration</h3>
+                            <p class="text-green-100 text-sm">Machine learning powered insights</p>
                         </div>
                     </div>
                 </div>
@@ -432,25 +441,30 @@
                 </div>
 
                 <div class="relative fade-in-up" style="animation-delay: 0.3s;">
+                    <!-- Main about image -->
+                    <div class="mb-8">
+                        <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Modern sustainable farming" class="w-full h-64 object-cover rounded-2xl shadow-lg">
+                    </div>
+                    
                     <div class="grid grid-cols-2 gap-6">
                         <div class="space-y-6">
-                            <div class="bg-green-50 rounded-xl p-6 text-center">
+                            <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center border border-green-200 shadow-sm">
                                 <div class="text-3xl font-bold text-green-600 mb-2" data-count="1000000">0</div>
-                                <p class="text-green-800">Acres Monitored</p>
+                                <p class="text-green-800 font-medium">Acres Monitored</p>
                             </div>
-                            <div class="bg-blue-50 rounded-xl p-6 text-center">
+                            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center border border-blue-200 shadow-sm">
                                 <div class="text-3xl font-bold text-blue-600 mb-2" data-count="25">0</div>
-                                <p class="text-blue-800">Years Experience</p>
+                                <p class="text-blue-800 font-medium">Years Experience</p>
                             </div>
                         </div>
                         <div class="space-y-6 mt-8">
-                            <div class="bg-purple-50 rounded-xl p-6 text-center">
+                            <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 text-center border border-purple-200 shadow-sm">
                                 <div class="text-3xl font-bold text-purple-600 mb-2" data-count="500">0</div>
-                                <p class="text-purple-800">Research Partners</p>
+                                <p class="text-purple-800 font-medium">Research Partners</p>
                             </div>
-                            <div class="bg-orange-50 rounded-xl p-6 text-center">
+                            <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 text-center border border-orange-200 shadow-sm">
                                 <div class="text-3xl font-bold text-orange-600 mb-2" data-count="99">0</div>
-                                <p class="text-orange-800">Satisfaction Rate</p>
+                                <p class="text-orange-800 font-medium">Satisfaction Rate</p>
                             </div>
                         </div>
                     </div>
@@ -484,9 +498,7 @@
                     </div>
                     <p class="text-gray-600 mb-6">"Harittech's drone monitoring system has revolutionized how I manage my crops. I can detect issues early and take action before they become problems."</p>
                     <div class="flex items-center">
-                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-user text-green-500"></i>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Rajesh Kumar" class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-green-200">
                         <div>
                             <h4 class="font-semibold text-gray-800">Rajesh Kumar</h4>
                             <p class="text-gray-500">Wheat Farmer, Punjab</p>
@@ -506,9 +518,7 @@
                     </div>
                     <p class="text-gray-600 mb-6">"The smart irrigation system has reduced my water usage by 40% while increasing my crop yield. It's been a game-changer for sustainable farming."</p>
                     <div class="flex items-center">
-                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-user text-green-500"></i>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b955?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Maria Santos" class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-green-200">
                         <div>
                             <h4 class="font-semibold text-gray-800">Maria Santos</h4>
                             <p class="text-gray-500">Vegetable Farmer, Brazil</p>
@@ -528,15 +538,96 @@
                     </div>
                     <p class="text-gray-600 mb-6">"The predictive analytics helped me optimize my planting schedule and maximize my harvest. The ROI has been incredible."</p>
                     <div class="flex items-center">
-                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-user text-green-500"></i>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="John Mitchell" class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-green-200">
                         <div>
                             <h4 class="font-semibold text-gray-800">John Mitchell</h4>
                             <p class="text-gray-500">Corn Farmer, Iowa</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+                    Our <span class="gradient-text">Technology</span> in Action
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    See how farmers around the world are transforming their operations with our innovative solutions.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Drone monitoring crops" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-lg font-semibold mb-1">Precision Monitoring</h3>
+                        <p class="text-sm">Real-time crop health analysis</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg fade-in-up" style="animation-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Smart irrigation system" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-lg font-semibold mb-1">Smart Irrigation</h3>
+                        <p class="text-sm">Water-efficient farming solutions</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg fade-in-up" style="animation-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Solar-powered farm equipment" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-lg font-semibold mb-1">Renewable Energy</h3>
+                        <p class="text-sm">Sustainable power solutions</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg fade-in-up" style="animation-delay: 0.3s;">
+                    <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Soil analysis technology" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-lg font-semibold mb-1">Soil Analysis</h3>
+                        <p class="text-sm">Advanced nutrient monitoring</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg fade-in-up" style="animation-delay: 0.4s;">
+                    <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mobile farm management" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-lg font-semibold mb-1">Mobile Management</h3>
+                        <p class="text-sm">Farm control at your fingertips</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg fade-in-up" style="animation-delay: 0.5s;">
+                    <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sustainable farming practices" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-lg font-semibold mb-1">Sustainable Practices</h3>
+                        <p class="text-sm">Eco-friendly farming methods</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-12 fade-in-up">
+                <button class="bg-green-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-600 transition-all transform hover:scale-105 shadow-lg">
+                    Explore Our Portfolio
+                </button>
             </div>
         </div>
     </section>
