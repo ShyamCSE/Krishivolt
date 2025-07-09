@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harittech - Empowering Farmers, Greening the Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #10b981;
+            --secondary-green: #059669;
+            --dark-green: #047857;
+            --light-green: #6ee7b7;
+            --bg-dark: #0f172a;
+            --text-light: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #064e3b 0%, #10b981 50%, #059669 100%);
+        }
+
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .tech-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .nav-glass {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .stats-counter {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-green);
+        }
+
+        .pulse-ring {
+            position: absolute;
+            border: 3px solid var(--primary-green);
+            border-radius: 50%;
+            animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.33);
+                opacity: 1;
+            }
+            80%, 100% {
+                transform: scale(2.4);
+                opacity: 0;
+            }
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #10b981, #059669);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .feature-icon {
+            background: linear-gradient(135deg, #10b981, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-glass transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                        <i class="fas fa-leaf text-white text-sm"></i>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800">Harittech</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-green-500 transition-colors">Home</a>
+                    <a href="#solutions" class="text-gray-700 hover:text-green-500 transition-colors">Solutions</a>
+                    <a href="#technology" class="text-gray-700 hover:text-green-500 transition-colors">Technology</a>
+                    <a href="#about" class="text-gray-700 hover:text-green-500 transition-colors">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-green-500 transition-colors">Contact</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-700 hover:text-green-500 transition-colors">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="text-gray-700 hover:text-green-500 transition-colors">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <button class="text-gray-700 hover:text-green-500 transition-colors">
+                        <i class="fas fa-globe"></i>
+                    </button>
+                    <button class="md:hidden text-gray-700 hover:text-green-500 transition-colors">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen hero-gradient relative overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 floating-animation">
+            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                <i class="fas fa-drone text-white text-2xl"></i>
+            </div>
+        </div>
+        
+        <div class="absolute top-40 right-20 floating-animation" style="animation-delay: -2s;">
+            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                <i class="fas fa-solar-panel text-white text-lg"></i>
+            </div>
+        </div>
+
+        <div class="absolute bottom-32 left-20 floating-animation" style="animation-delay: -4s;">
+            <div class="w-14 h-14 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                <i class="fas fa-seedling text-white text-xl"></i>
+            </div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
+                <!-- Content -->
+                <div class="text-white space-y-8 fade-in-up">
+                    <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
+                        Empowering <span class="gradient-text">Farmers</span>.<br>
+                        Greening the <span class="gradient-text">Future</span>.
+                    </h1>
+                    
+                    <p class="text-xl lg:text-2xl text-green-100 max-w-2xl">
+                        Revolutionary agricultural technology solutions that combine AI, IoT, and sustainable practices to transform farming and create a greener tomorrow.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+                            Explore Solutions
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-800 transition-all transform hover:scale-105">
+                            Join the Harit Movement
+                        </button>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-8 pt-8">
+                        <div class="text-center">
+                            <div class="stats-counter" data-count="10000">0</div>
+                            <p class="text-green-100">Farmers Empowered</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="stats-counter" data-count="50">0</div>
+                            <p class="text-green-100">Countries Served</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="stats-counter" data-count="95">0</div>
+                            <p class="text-green-100">Success Rate</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image/Illustration -->
+                <div class="relative fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="relative">
+                        <!-- Farmer silhouette with tablet -->
+                        <div class="w-96 h-96 mx-auto relative">
+                            <div class="absolute inset-0 bg-gradient-to-br from-green-400 to-green-600 rounded-full opacity-20 pulse-ring"></div>
+                            <div class="absolute inset-8 bg-white bg-opacity-10 rounded-full flex items-center justify-center backdrop-filter backdrop-blur-sm">
+                                <i class="fas fa-tablet-alt text-white text-6xl"></i>
+                            </div>
+                        </div>
+
+                        <!-- Floating tech icons -->
+                        <div class="absolute -top-4 -right-4 tech-card rounded-lg p-4">
+                            <i class="fas fa-wifi text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 tech-card rounded-lg p-4">
+                            <i class="fas fa-cloud text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute top-1/2 -left-8 tech-card rounded-lg p-4">
+                            <i class="fas fa-chart-line text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute top-1/2 -right-8 tech-card rounded-lg p-4">
+                            <i class="fas fa-satellite text-white text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="solutions" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+                    Smart <span class="gradient-text">Solutions</span> for Modern Agriculture
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Discover our comprehensive suite of agricultural technologies designed to optimize crop yields, reduce environmental impact, and increase profitability.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up">
+                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-drone feature-icon text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Precision Drone Monitoring</h3>
+                    <p class="text-gray-600 mb-6">Advanced drone technology for real-time crop monitoring, pest detection, and yield prediction using AI-powered image analysis.</p>
+                    <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Learn More →</a>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-tint feature-icon text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Smart Irrigation Systems</h3>
+                    <p class="text-gray-600 mb-6">IoT-enabled irrigation solutions that optimize water usage based on soil moisture, weather patterns, and crop requirements.</p>
+                    <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Learn More →</a>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line feature-icon text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Predictive Analytics</h3>
+                    <p class="text-gray-600 mb-6">Machine learning algorithms that analyze weather, soil, and crop data to provide actionable insights and recommendations.</p>
+                    <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Learn More →</a>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-solar-panel feature-icon text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Renewable Energy Solutions</h3>
+                    <p class="text-gray-600 mb-6">Solar and wind-powered systems that reduce carbon footprint while providing sustainable energy for farm operations.</p>
+                    <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Learn More →</a>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-microscope feature-icon text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Soil Health Analysis</h3>
+                    <p class="text-gray-600 mb-6">Comprehensive soil testing and analysis services that provide detailed insights into nutrient levels and soil composition.</p>
+                    <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Learn More →</a>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up" style="animation-delay: 0.5s;">
+                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt feature-icon text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Mobile Farm Management</h3>
+                    <p class="text-gray-600 mb-6">Comprehensive mobile app that puts all farm management tools in your pocket, from field mapping to inventory tracking.</p>
+                    <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Showcase -->
+    <section id="technology" class="py-20 hero-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Cutting-Edge <span class="text-green-300">Technology</span>
+                </h2>
+                <p class="text-xl text-green-100 max-w-3xl mx-auto">
+                    Explore the innovative technologies that power our agricultural solutions and drive sustainable farming practices.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8 fade-in-up">
+                    <div class="tech-card rounded-xl p-6">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-12 h-12 bg-green-400 bg-opacity-20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-brain text-green-300 text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Artificial Intelligence</h3>
+                        </div>
+                        <p class="text-green-100">Advanced machine learning algorithms that analyze crop patterns, predict yields, and optimize farming decisions in real-time.</p>
+                    </div>
+
+                    <div class="tech-card rounded-xl p-6">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-12 h-12 bg-green-400 bg-opacity-20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-network-wired text-green-300 text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">IoT Sensors</h3>
+                        </div>
+                        <p class="text-green-100">Network of smart sensors that monitor soil moisture, temperature, humidity, and nutrient levels across your entire farm.</p>
+                    </div>
+
+                    <div class="tech-card rounded-xl p-6">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-12 h-12 bg-green-400 bg-opacity-20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-satellite text-green-300 text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Satellite Imaging</h3>
+                        </div>
+                        <p class="text-green-100">High-resolution satellite imagery for crop monitoring, field mapping, and early detection of potential issues.</p>
+                    </div>
+                </div>
+
+                <div class="relative fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="w-full h-96 bg-white bg-opacity-10 rounded-2xl backdrop-filter backdrop-blur-sm flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-cogs text-8xl text-green-300 mb-6"></i>
+                            <h3 class="text-2xl font-bold mb-4">Integrated Technology Stack</h3>
+                            <p class="text-green-100">All our technologies work seamlessly together to provide comprehensive farm management solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-up">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+                        Building a <span class="gradient-text">Sustainable</span> Future
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        At Harittech, we believe that technology and nature can work together to create a more sustainable and prosperous future for farmers worldwide. Our mission is to democratize access to advanced agricultural technologies.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-green-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">Environmental Sustainability</h4>
+                                <p class="text-gray-600">Reducing chemical usage and promoting eco-friendly farming practices.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-green-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">Increased Productivity</h4>
+                                <p class="text-gray-600">Helping farmers achieve higher yields with less resources.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-green-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-2">Data-Driven Decisions</h4>
+                                <p class="text-gray-600">Empowering farmers with actionable insights and recommendations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="space-y-6">
+                            <div class="bg-green-50 rounded-xl p-6 text-center">
+                                <div class="text-3xl font-bold text-green-600 mb-2" data-count="1000000">0</div>
+                                <p class="text-green-800">Acres Monitored</p>
+                            </div>
+                            <div class="bg-blue-50 rounded-xl p-6 text-center">
+                                <div class="text-3xl font-bold text-blue-600 mb-2" data-count="25">0</div>
+                                <p class="text-blue-800">Years Experience</p>
+                            </div>
+                        </div>
+                        <div class="space-y-6 mt-8">
+                            <div class="bg-purple-50 rounded-xl p-6 text-center">
+                                <div class="text-3xl font-bold text-purple-600 mb-2" data-count="500">0</div>
+                                <p class="text-purple-800">Research Partners</p>
+                            </div>
+                            <div class="bg-orange-50 rounded-xl p-6 text-center">
+                                <div class="text-3xl font-bold text-orange-600 mb-2" data-count="99">0</div>
+                                <p class="text-orange-800">Satisfaction Rate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+                    What <span class="gradient-text">Farmers</span> Say
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Hear from farmers around the world who have transformed their operations with Harittech solutions.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-8 fade-in-up">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Harittech's drone monitoring system has revolutionized how I manage my crops. I can detect issues early and take action before they become problems."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-green-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Rajesh Kumar</h4>
+                            <p class="text-gray-500">Wheat Farmer, Punjab</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8 fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The smart irrigation system has reduced my water usage by 40% while increasing my crop yield. It's been a game-changer for sustainable farming."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-green-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Maria Santos</h4>
+                            <p class="text-gray-500">Vegetable Farmer, Brazil</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The predictive analytics helped me optimize my planting schedule and maximize my harvest. The ROI has been incredible."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-green-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">John Mitchell</h4>
+                            <p class="text-gray-500">Corn Farmer, Iowa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 hero-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Ready to <span class="text-green-300">Transform</span> Your Farm?
+                </h2>
+                <p class="text-xl text-green-100 max-w-3xl mx-auto">
+                    Join thousands of farmers who are already using Harittech to increase productivity and sustainability.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="fade-in-up">
+                    <div class="space-y-8">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-phone text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white">Call Us</h4>
+                                <p class="text-green-100">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-envelope text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white">Email Us</h4>
+                                <p class="text-green-100">contact@harittech.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white">Visit Us</h4>
+                                <p class="text-green-100">123 AgTech Plaza, Silicon Valley, CA 94000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-in-up" style="animation-delay: 0.3s;">
+                    <form class="space-y-6 bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm rounded-xl p-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input type="text" placeholder="First Name" class="bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg px-4 py-3 text-white placeholder-green-100 focus:outline-none focus:ring-2 focus:ring-green-300">
+                            <input type="text" placeholder="Last Name" class="bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg px-4 py-3 text-white placeholder-green-100 focus:outline-none focus:ring-2 focus:ring-green-300">
+                        </div>
+                        <input type="email" placeholder="Email Address" class="w-full bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg px-4 py-3 text-white placeholder-green-100 focus:outline-none focus:ring-2 focus:ring-green-300">
+                        <input type="tel" placeholder="Phone Number" class="w-full bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg px-4 py-3 text-white placeholder-green-100 focus:outline-none focus:ring-2 focus:ring-green-300">
+                        <textarea rows="4" placeholder="Tell us about your farming needs..." class="w-full bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg px-4 py-3 text-white placeholder-green-100 focus:outline-none focus:ring-2 focus:ring-green-300 resize-none"></textarea>
+                        <button type="submit" class="w-full bg-white text-green-800 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-leaf text-white text-sm"></i>
+                        </div>
+                        <span class="text-xl font-bold">Harittech</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering farmers with cutting-edge technology for a sustainable future.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-green-500 transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-green-500 transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-green-500 transition-colors">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-green-500 transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Solutions</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition-colors">Drone Monitoring</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition-colors">Smart Irrigation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition-colors">Predictive Analytics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition-colors">Soil Analysis</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition-colors">Documentation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition-colors">Support</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Harittech. All rights reserved. Empowering farmers, greening the future.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Animated counters
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-count'));
+            const increment = target / 50;
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, 40);
+        }
+
+        // Start counter animation when elements come into view
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('[data-count]').forEach(counter => {
+            counterObserver.observe(counter);
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // Form submission (you can replace this with actual form handling)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
