@@ -115,9 +115,297 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
+        /* Advanced Animations */
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 0.8s ease;
+        }
+
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(100px);
+            transition: all 0.8s ease;
+        }
+
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.6s ease;
+        }
+
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .rotate-in {
+            opacity: 0;
+            transform: rotate(-10deg) scale(0.8);
+            transition: all 0.8s ease;
+        }
+
+        .rotate-in.visible {
+            opacity: 1;
+            transform: rotate(0deg) scale(1);
+        }
+
+        /* Particle Background Animation */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(16, 185, 129, 0.3);
+            border-radius: 50%;
+            animation: particles 15s linear infinite;
+        }
+
+        @keyframes particles {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Morphing shapes */
+        .morphing-shape {
+            background: linear-gradient(45deg, #10b981, #34d399, #6ee7b7);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation: morph 8s ease-in-out infinite;
+        }
+
+        @keyframes morph {
+            0%, 100% {
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+                transform: rotate(0deg);
+            }
+            25% {
+                border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+                transform: rotate(90deg);
+            }
+            50% {
+                border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+                transform: rotate(180deg);
+            }
+            75% {
+                border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+                transform: rotate(270deg);
+            }
+        }
+
+        /* Glowing effect */
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .glow-effect:hover {
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.8);
+        }
+
+        /* Text typing animation */
+        .typing-animation {
+            overflow: hidden;
+            border-right: 2px solid #10b981;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #10b981; }
+        }
+
+        /* 3D card effect */
+        .card-3d {
+            perspective: 1000px;
+        }
+
+        .card-3d-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card-3d:hover .card-3d-inner {
+            transform: rotateY(10deg) rotateX(10deg);
+        }
+
+        /* Ripple effect */
+        .ripple {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ripple::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(16, 185, 129, 0.5);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .ripple:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Progress bar animation */
+        .progress-bar {
+            background: linear-gradient(90deg, #10b981, #34d399);
+            height: 4px;
+            border-radius: 2px;
+            animation: progress 2s ease-in-out;
+        }
+
+        @keyframes progress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        /* Stagger animation */
+        .stagger-animation {
+            animation-delay: calc(var(--stagger) * 0.1s);
+        }
+
+        /* Ripple effect for JavaScript */
+        .ripple-effect {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(16, 185, 129, 0.4);
+            transform: scale(0);
+            animation: ripple-expand 0.6s linear;
+            pointer-events: none;
+        }
+
+        @keyframes ripple-expand {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Enhanced button hover effects */
+        button, .btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        button:hover, .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading animation for images */
+        img {
+            transition: opacity 0.3s ease;
+        }
+
+        img[src] {
+            opacity: 1;
+        }
+
+        /* Loading Screen */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #064e3b 0%, #10b981 50%, #059669 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 20px;
+            opacity: 0;
+            animation: pulse-text 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-text {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="text-center">
+            <div class="loader"></div>
+            <div class="loading-text">Loading Harittech...</div>
+        </div>
+    </div>
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 nav-glass transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -161,10 +449,23 @@
         <div class="absolute inset-0 bg-gradient-to-br from-green-900/60 via-green-800/50 to-green-600/40"></div>
         <div class="absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-position: center; opacity: 0.3;"></div>
         
+        <!-- Animated Particles -->
+        <div class="particles">
+            <div class="particle" style="left: 10%; width: 4px; height: 4px; animation-delay: 0s;"></div>
+            <div class="particle" style="left: 20%; width: 6px; height: 6px; animation-delay: 2s;"></div>
+            <div class="particle" style="left: 30%; width: 3px; height: 3px; animation-delay: 4s;"></div>
+            <div class="particle" style="left: 40%; width: 5px; height: 5px; animation-delay: 6s;"></div>
+            <div class="particle" style="left: 50%; width: 4px; height: 4px; animation-delay: 8s;"></div>
+            <div class="particle" style="left: 60%; width: 6px; height: 6px; animation-delay: 10s;"></div>
+            <div class="particle" style="left: 70%; width: 3px; height: 3px; animation-delay: 12s;"></div>
+            <div class="particle" style="left: 80%; width: 5px; height: 5px; animation-delay: 14s;"></div>
+            <div class="particle" style="left: 90%; width: 4px; height: 4px; animation-delay: 1s;"></div>
+        </div>
+        
         <!-- Floating Elements -->
         <div class="absolute top-20 left-10 floating-animation">
             <div class="w-16 h-16 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                <i class="fa-solid fa-drone text-white text-2xl"></i>
+                <i class="fas fa-drone text-white text-2xl"></i>
             </div>
         </div>
         
@@ -183,63 +484,72 @@
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
                 <!-- Content -->
-                <div class="text-white space-y-8 fade-in-up">
+                <div class="text-white space-y-8 slide-in-left">
                     <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
-                        Empowering <span class="gradient-text">Farmers</span>.<br>
-                        Greening the <span class="gradient-text">Future</span>.
+                        <span class="typing-animation" style="animation-delay: 0.5s;">Empowering</span> <span class="gradient-text scale-in" style="animation-delay: 1s;">Farmers</span>.<br>
+                        <span class="typing-animation" style="animation-delay: 2s;">Greening the</span> <span class="gradient-text scale-in" style="animation-delay: 2.5s;">Future</span>.
                     </h1>
                     
-                    <p class="text-xl lg:text-2xl text-green-100 max-w-2xl">
+                    <p class="text-xl lg:text-2xl text-green-100 max-w-2xl fade-in-up" style="animation-delay: 3s;">
                         Revolutionary agricultural technology solutions that combine AI, IoT, and sustainable practices to transform farming and create a greener tomorrow.
                     </p>
                     
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+                    <div class="flex flex-col sm:flex-row gap-4 scale-in" style="animation-delay: 3.5s;">
+                        <button class="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold text-lg ripple glow-effect transition-all transform hover:scale-105 shadow-lg">
                             Explore Solutions
                         </button>
-                        <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-800 transition-all transform hover:scale-105">
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg ripple hover:bg-white hover:text-green-800 transition-all transform hover:scale-105">
                             Join the Harit Movement
                         </button>
                     </div>
 
                     <!-- Stats -->
                     <div class="grid grid-cols-3 gap-8 pt-8">
-                        <div class="text-center">
-                            <div class="stats-counter" data-count="10000">0</div>
+                        <div class="text-center scale-in stagger-animation" style="--stagger: 1; animation-delay: 4s;">
+                            <div class="stats-counter glow-effect" data-count="10000">0</div>
+                            <div class="progress-bar w-full mt-2 mb-2"></div>
                             <p class="text-green-100">Farmers Empowered</p>
                         </div>
-                        <div class="text-center">
-                            <div class="stats-counter" data-count="50">0</div>
+                        <div class="text-center scale-in stagger-animation" style="--stagger: 2; animation-delay: 4.2s;">
+                            <div class="stats-counter glow-effect" data-count="50">0</div>
+                            <div class="progress-bar w-full mt-2 mb-2"></div>
                             <p class="text-green-100">Countries Served</p>
                         </div>
-                        <div class="text-center">
-                            <div class="stats-counter" data-count="95">0</div>
+                        <div class="text-center scale-in stagger-animation" style="--stagger: 3; animation-delay: 4.4s;">
+                            <div class="stats-counter glow-effect" data-count="95">0</div>
+                            <div class="progress-bar w-full mt-2 mb-2"></div>
                             <p class="text-green-100">Success Rate</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Image/Illustration -->
-                <div class="relative fade-in-up" style="animation-delay: 0.3s;">
+                <div class="relative slide-in-right" style="animation-delay: 1s;">
+                    <!-- Morphing background shape -->
+                    <div class="absolute -top-10 -right-10 w-32 h-32 morphing-shape opacity-20"></div>
+                    <div class="absolute -bottom-10 -left-10 w-24 h-24 morphing-shape opacity-30" style="animation-delay: -4s;"></div>
+                    
                     <div class="relative">
                         <!-- Main hero image -->
-                        <div class="w-full h-96 mx-auto relative">
-                            <div class="absolute inset-0 bg-gradient-to-br from-green-400/20 to-green-600/20 rounded-2xl backdrop-blur-sm"></div>
-                            <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Smart Farming Technology" class="w-full h-full object-cover rounded-2xl shadow-2xl">
-                            <div class="absolute inset-0 bg-gradient-to-t from-green-900/40 via-transparent to-transparent rounded-2xl"></div>
+                        <div class="w-full h-96 mx-auto relative card-3d">
+                            <div class="card-3d-inner">
+                                <div class="absolute inset-0 bg-gradient-to-br from-green-400/20 to-green-600/20 rounded-2xl backdrop-blur-sm"></div>
+                                <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Smart Farming Technology" class="w-full h-full object-cover rounded-2xl shadow-2xl glow-effect">
+                                <div class="absolute inset-0 bg-gradient-to-t from-green-900/40 via-transparent to-transparent rounded-2xl"></div>
+                            </div>
                         </div>
 
                         <!-- Floating tech cards with images -->
-                        <div class="absolute -top-4 -right-4 tech-card rounded-lg p-3 w-20 h-20">
+                        <div class="absolute -top-4 -right-4 tech-card rounded-lg p-3 w-20 h-20 rotate-in" style="animation-delay: 1.5s;">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Drone Technology" class="w-full h-full object-cover rounded">
                         </div>
-                        <div class="absolute -bottom-4 -left-4 tech-card rounded-lg p-3 w-20 h-20">
+                        <div class="absolute -bottom-4 -left-4 tech-card rounded-lg p-3 w-20 h-20 rotate-in" style="animation-delay: 2s;">
                             <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="IoT Sensors" class="w-full h-full object-cover rounded">
                         </div>
-                        <div class="absolute top-1/2 -left-8 tech-card rounded-lg p-3 w-20 h-20">
+                        <div class="absolute top-1/2 -left-8 tech-card rounded-lg p-3 w-20 h-20 rotate-in" style="animation-delay: 2.5s;">
                             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Data Analytics" class="w-full h-full object-cover rounded">
                         </div>
-                        <div class="absolute top-1/2 -right-8 tech-card rounded-lg p-3 w-20 h-20">
+                        <div class="absolute top-1/2 -right-8 tech-card rounded-lg p-3 w-20 h-20 rotate-in" style="animation-delay: 3s;">
                             <img src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Satellite Technology" class="w-full h-full object-cover rounded">
                         </div>
                     </div>
@@ -267,63 +577,75 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up">
-                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fa-solid fa-drone feature-icon text-2xl"></i>
+                <div class="card-3d bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scale-in stagger-animation" style="--stagger: 1;">
+                    <div class="card-3d-inner">
+                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6 glow-effect">
+                            <i class="fas fa-drone feature-icon text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Precision Drone Monitoring</h3>
+                        <p class="text-gray-600 mb-6">Advanced drone technology for real-time crop monitoring, pest detection, and yield prediction using AI-powered image analysis.</p>
+                        <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors ripple">Learn More →</a>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Precision Drone Monitoring</h3>
-                    <p class="text-gray-600 mb-6">Advanced drone technology for real-time crop monitoring, pest detection, and yield prediction using AI-powered image analysis.</p>
-                    <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Learn More →</a>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up" style="animation-delay: 0.1s;">
-                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-tint feature-icon text-2xl"></i>
+                <div class="card-3d bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scale-in stagger-animation" style="--stagger: 2;">
+                    <div class="card-3d-inner">
+                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6 glow-effect">
+                            <i class="fas fa-tint feature-icon text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Smart Irrigation Systems</h3>
+                        <p class="text-gray-600 mb-6">IoT-enabled irrigation solutions that optimize water usage based on soil moisture, weather patterns, and crop requirements.</p>
+                        <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors ripple">Learn More →</a>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Smart Irrigation Systems</h3>
-                    <p class="text-gray-600 mb-6">IoT-enabled irrigation solutions that optimize water usage based on soil moisture, weather patterns, and crop requirements.</p>
-                    <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Learn More →</a>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up" style="animation-delay: 0.2s;">
-                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-chart-line feature-icon text-2xl"></i>
+                <div class="card-3d bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scale-in stagger-animation" style="--stagger: 3;">
+                    <div class="card-3d-inner">
+                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6 glow-effect">
+                            <i class="fas fa-chart-line feature-icon text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Predictive Analytics</h3>
+                        <p class="text-gray-600 mb-6">Machine learning algorithms that analyze weather, soil, and crop data to provide actionable insights and recommendations.</p>
+                        <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors ripple">Learn More →</a>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Predictive Analytics</h3>
-                    <p class="text-gray-600 mb-6">Machine learning algorithms that analyze weather, soil, and crop data to provide actionable insights and recommendations.</p>
-                    <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Learn More →</a>
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up" style="animation-delay: 0.3s;">
-                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-solar-panel feature-icon text-2xl"></i>
+                <div class="card-3d bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scale-in stagger-animation" style="--stagger: 4;">
+                    <div class="card-3d-inner">
+                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6 glow-effect">
+                            <i class="fas fa-solar-panel feature-icon text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Renewable Energy Solutions</h3>
+                        <p class="text-gray-600 mb-6">Solar and wind-powered systems that reduce carbon footprint while providing sustainable energy for farm operations.</p>
+                        <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors ripple">Learn More →</a>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Renewable Energy Solutions</h3>
-                    <p class="text-gray-600 mb-6">Solar and wind-powered systems that reduce carbon footprint while providing sustainable energy for farm operations.</p>
-                    <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Learn More →</a>
                 </div>
 
                 <!-- Feature 5 -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up" style="animation-delay: 0.4s;">
-                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-microscope feature-icon text-2xl"></i>
+                <div class="card-3d bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scale-in stagger-animation" style="--stagger: 5;">
+                    <div class="card-3d-inner">
+                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6 glow-effect">
+                            <i class="fas fa-microscope feature-icon text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Soil Health Analysis</h3>
+                        <p class="text-gray-600 mb-6">Comprehensive soil testing and analysis services that provide detailed insights into nutrient levels and soil composition.</p>
+                        <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors ripple">Learn More →</a>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Soil Health Analysis</h3>
-                    <p class="text-gray-600 mb-6">Comprehensive soil testing and analysis services that provide detailed insights into nutrient levels and soil composition.</p>
-                    <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Learn More →</a>
                 </div>
 
                 <!-- Feature 6 -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 fade-in-up" style="animation-delay: 0.5s;">
-                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-mobile-alt feature-icon text-2xl"></i>
+                <div class="card-3d bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scale-in stagger-animation" style="--stagger: 6;">
+                    <div class="card-3d-inner">
+                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6 glow-effect">
+                            <i class="fas fa-mobile-alt feature-icon text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Mobile Farm Management</h3>
+                        <p class="text-gray-600 mb-6">Comprehensive mobile app that puts all farm management tools in your pocket, from field mapping to inventory tracking.</p>
+                        <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors ripple">Learn More →</a>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Mobile Farm Management</h3>
-                    <p class="text-gray-600 mb-6">Comprehensive mobile app that puts all farm management tools in your pocket, from field mapping to inventory tracking.</p>
-                    <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors">Learn More →</a>
                 </div>
             </div>
         </div>
@@ -763,6 +1085,18 @@
     </footer>
 
     <script>
+        // Loading screen handler
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+                // Initialize all animations after loading
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 1500); // Show loading for 1.5 seconds minimum
+        });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -777,7 +1111,7 @@
             });
         });
 
-        // Fade in animation on scroll
+        // Enhanced animation observer for multiple animation types
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -791,9 +1125,42 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.fade-in-up').forEach(el => {
+        // Observe all animation classes
+        document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right, .scale-in, .rotate-in').forEach(el => {
             observer.observe(el);
         });
+
+        // Add typing animation to elements
+        function initTypingAnimations() {
+            document.querySelectorAll('.typing-animation').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Enhanced ripple effect
+        document.querySelectorAll('.ripple').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple-effect');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Initialize animations
+        initTypingAnimations();
 
         // Animated counters
         function animateCounter(element) {
@@ -840,6 +1207,92 @@
             e.preventDefault();
             alert('Thank you for your message! We will get back to you soon.');
             this.reset();
+        });
+
+        // Parallax scrolling effects
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.floating-animation');
+            
+            parallaxElements.forEach((element, index) => {
+                const speed = 0.5 + (index * 0.1);
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translateY(${yPos}px)`;
+            });
+
+            // Morphing shapes parallax
+            const morphingShapes = document.querySelectorAll('.morphing-shape');
+            morphingShapes.forEach((shape, index) => {
+                const speed = 0.3 + (index * 0.05);
+                const yPos = -(scrolled * speed);
+                shape.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.1}deg)`;
+            });
+        });
+
+        // Mouse movement parallax
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            // Move floating elements based on mouse position
+            const floatingElements = document.querySelectorAll('.floating-animation');
+            floatingElements.forEach((element, index) => {
+                const speed = 10 + (index * 5);
+                const x = (mouseX - 0.5) * speed;
+                const y = (mouseY - 0.5) * speed;
+                element.style.transform += ` translate(${x}px, ${y}px)`;
+            });
+
+            // 3D tilt effect for cards
+            const cards = document.querySelectorAll('.card-3d');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                const mouseXRelative = (e.clientX - centerX) / (rect.width / 2);
+                const mouseYRelative = (e.clientY - centerY) / (rect.height / 2);
+                
+                if (Math.abs(mouseXRelative) < 1 && Math.abs(mouseYRelative) < 1) {
+                    const tiltX = mouseYRelative * -10;
+                    const tiltY = mouseXRelative * 10;
+                    card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+                }
+            });
+        });
+
+        // Reset card transforms when mouse leaves
+        document.addEventListener('mouseleave', () => {
+            document.querySelectorAll('.card-3d').forEach(card => {
+                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+            });
+        });
+
+        // Smooth reveal animations with better timing
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.scale-in, .slide-in-left, .slide-in-right, .rotate-in');
+            
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+
+        // Add dynamic glow effects based on scroll position
+        window.addEventListener('scroll', () => {
+            const scrollPercent = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
+            const glowElements = document.querySelectorAll('.glow-effect');
+            
+            glowElements.forEach((element, index) => {
+                const intensity = Math.sin(scrollPercent * Math.PI * 2 + index) * 0.5 + 0.5;
+                element.style.boxShadow = `0 0 ${20 + intensity * 20}px rgba(16, 185, 129, ${0.3 + intensity * 0.4})`;
+            });
         });
     </script>
 </body>
