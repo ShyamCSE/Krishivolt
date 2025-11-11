@@ -18,6 +18,9 @@
             line-height: 1.6;
             color: #1f2937;
         }
+        .logo{
+                max-width: 64px;
+        }
 
         .hero-gradient {
             background: linear-gradient(135deg, #064e3b 0%, #10b981 50%, #059669 100%);
