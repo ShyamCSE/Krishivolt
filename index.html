@@ -38,29 +38,30 @@
                 </div>
                 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-green-500 transition-colors">Home</a>
-                    <a href="#solutions" class="text-gray-700 hover:text-green-500 transition-colors">Solutions</a>
-                    <a href="#technology" class="text-gray-700 hover:text-green-500 transition-colors">Technology</a>
-                    <a href="about.html" class="text-gray-700 hover:text-green-500 transition-colors">About</a>
-                    <a href="#gallery" class="text-gray-700 hover:text-green-500 transition-colors">Gallery</a>
-                    <a href="contact.html" class="text-gray-700 hover:text-green-500 transition-colors">Contact</a>
-                     <a href="blog.html" class="text-gray-700 hover:text-green-500 transition-colors">Blogs</a>
+                    <a href="index.html" class="text-white hover:text-green-300 transition-colors">Home</a>
+                    <a href="solutions.html" class="text-white hover:text-green-300 transition-colors">Solutions</a>
+                    <a href="technology.html" class="text-white hover:text-green-300 transition-colors">Technology</a>
+                    <a href="about.html" class="text-white hover:text-green-300 transition-colors">About</a>
+                    <a href="#gallery" class="text-white hover:text-green-300 transition-colors">Gallery</a>
+                    <a href="contact.html" class="text-white hover:text-green-300 transition-colors">Contact</a>
+                    <a href="blog.html" class="text-white hover:text-green-300 transition-colors">Blogs</a>
                 </div>
 
-                <!-- <div class="flex items-center space-x-4">
-                    <button class="text-gray-700 hover:text-green-500 transition-colors">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <button class="text-gray-700 hover:text-green-500 transition-colors">
-                        <i class="fas fa-user"></i>
-                    </button>
-                    <button class="text-gray-700 hover:text-green-500 transition-colors">
-                        <i class="fas fa-globe"></i>
-                    </button>
-                    <button class="md:hidden text-gray-700 hover:text-green-500 transition-colors">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div> -->
+                <button id="mobileMenuToggle" class="md:hidden text-white border border-white/20 rounded-full p-3 hover:bg-white/10 transition">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden absolute inset-x-0 top-full bg-slate-950/95 border-t border-white/10 backdrop-blur-xl md:hidden z-40">
+            <div class="max-w-7xl mx-auto px-4 py-4 space-y-3">
+                <a href="index.html" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">Home</a>
+                <a href="solutions.html" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">Solutions</a>
+                <a href="#technology" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">Technology</a>
+                <a href="about.html" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">About</a>
+                <a href="gallery.html" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">Gallery</a>
+                <a href="contact.html" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">Contact</a>
+                <a href="blog.html" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">Blogs</a>
             </div>
         </div>
     </nav>
@@ -134,88 +135,94 @@
     </section>
 
     <!-- Features Section -->
-    <section id="solutions" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="solutions" class="relative overflow-hidden py-24 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.16),_transparent_35%),linear-gradient(135deg,_#f8fafc_0%,_#f0fdf4_100%)]">
+        <div class="absolute -top-20 right-0 h-72 w-72 rounded-full bg-emerald-400/20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-green-300/20 blur-3xl"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in-up">
-                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+                <div class="inline-flex items-center gap-3 rounded-full border border-emerald-200 bg-white/80 px-4 py-2 text-sm font-medium text-emerald-700 shadow-sm backdrop-blur">
+                    <span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
+                    Future-ready agriculture
+                </div>
+                <h2 class="mt-6 text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
                     Smart <span class="gradient-text">Solutions</span> for Modern Agriculture
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Discover our comprehensive suite of agricultural technologies designed to optimize crop yields, reduce environmental impact, and increase profitability.
+                    Discover a connected suite of technologies designed to boost yields, reduce waste, and help every farm operate with clarity and confidence.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="card-3d bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scale-in stagger-animation" style="--stagger: 1;">
-                    <div class="card-3d-inner">
-                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6 glow-effect">
-                            <!-- <i class="fa-solid fa-drone "></i> -->
-                            <i class="fa-brands fa-phoenix-squadron feature-icon text-2xl"></i>
+                <div class="group relative overflow-hidden rounded-[28px] border border-white/70 bg-white/90 p-8 shadow-[0_20px_70px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_30px_90px_rgba(16,185,129,0.16)] scale-in stagger-animation" style="--stagger: 1;">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-50/80 via-white to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                    <div class="relative">
+                        <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-green-400 text-white shadow-lg shadow-emerald-500/20">
+                            <i class="fa-brands fa-phoenix-squadron text-2xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Precision Drone Monitoring</h3>
-                        <p class="text-gray-600 mb-6">Advanced drone technology for real-time crop monitoring, pest detection, and yield prediction using AI-powered image analysis.</p>
-                        <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors ripple">Learn More →</a>
+                        <p class="text-gray-600 mb-6">Advanced aerial insights for crop scouting, pest detection, and smarter field decisions in real time.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="card-3d bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scale-in stagger-animation" style="--stagger: 2;">
-                    <div class="card-3d-inner">
-                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6 glow-effect">
-                            <i class="fas fa-tint feature-icon text-2xl"></i>
+                <div class="group relative overflow-hidden rounded-[28px] border border-white/70 bg-white/90 p-8 shadow-[0_20px_70px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_30px_90px_rgba(16,185,129,0.16)] scale-in stagger-animation" style="--stagger: 2;">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-50/80 via-white to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                    <div class="relative">
+                        <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-green-400 text-white shadow-lg shadow-emerald-500/20">
+                            <i class="fas fa-tint text-2xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Smart Irrigation Systems</h3>
-                        <p class="text-gray-600 mb-6">IoT-enabled irrigation solutions that optimize water usage based on soil moisture, weather patterns, and crop requirements.</p>
-                        <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors ripple">Learn More →</a>
+                        <p class="text-gray-600 mb-6">IoT-led irrigation that adapts automatically to soil moisture, weather, and crop demand.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="card-3d bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scale-in stagger-animation" style="--stagger: 3;">
-                    <div class="card-3d-inner">
-                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6 glow-effect">
-                            <i class="fas fa-chart-line feature-icon text-2xl"></i>
+                <div class="group relative overflow-hidden rounded-[28px] border border-white/70 bg-white/90 p-8 shadow-[0_20px_70px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_30px_90px_rgba(16,185,129,0.16)] scale-in stagger-animation" style="--stagger: 3;">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-50/80 via-white to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                    <div class="relative">
+                        <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-green-400 text-white shadow-lg shadow-emerald-500/20">
+                            <i class="fas fa-chart-line text-2xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Predictive Analytics</h3>
-                        <p class="text-gray-600 mb-6">Machine learning algorithms that analyze weather, soil, and crop data to provide actionable insights and recommendations.</p>
-                        <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors ripple">Learn More →</a>
+                        <p class="text-gray-600 mb-6">Machine learning that turns weather, soil, and crop data into actionable farming guidance.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="card-3d bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scale-in stagger-animation" style="--stagger: 4;">
-                    <div class="card-3d-inner">
-                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6 glow-effect">
-                            <i class="fas fa-solar-panel feature-icon text-2xl"></i>
+                <div class="group relative overflow-hidden rounded-[28px] border border-white/70 bg-white/90 p-8 shadow-[0_20px_70px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_30px_90px_rgba(16,185,129,0.16)] scale-in stagger-animation" style="--stagger: 4;">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-50/80 via-white to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                    <div class="relative">
+                        <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-green-400 text-white shadow-lg shadow-emerald-500/20">
+                            <i class="fas fa-solar-panel text-2xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Renewable Energy Solutions</h3>
-                        <p class="text-gray-600 mb-6">Solar and wind-powered systems that reduce carbon footprint while providing sustainable energy for farm operations.</p>
-                        <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors ripple">Learn More →</a>
+                        <p class="text-gray-600 mb-6">Sustainable power systems that support irrigation, control, and daily farm operations efficiently.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Feature 5 -->
-                <div class="card-3d bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scale-in stagger-animation" style="--stagger: 5;">
-                    <div class="card-3d-inner">
-                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6 glow-effect">
-                            <i class="fas fa-microscope feature-icon text-2xl"></i>
+                <div class="group relative overflow-hidden rounded-[28px] border border-white/70 bg-white/90 p-8 shadow-[0_20px_70px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_30px_90px_rgba(16,185,129,0.16)] scale-in stagger-animation" style="--stagger: 5;">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-50/80 via-white to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                    <div class="relative">
+                        <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-green-400 text-white shadow-lg shadow-emerald-500/20">
+                            <i class="fas fa-microscope text-2xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Soil Health Analysis</h3>
-                        <p class="text-gray-600 mb-6">Comprehensive soil testing and analysis services that provide detailed insights into nutrient levels and soil composition.</p>
-                        <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors ripple">Learn More →</a>
+                        <p class="text-gray-600 mb-6">Comprehensive soil testing and nutrient insights that help improve productivity and sustainability.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Feature 6 -->
-                <div class="card-3d bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scale-in stagger-animation" style="--stagger: 6;">
-                    <div class="card-3d-inner">
-                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6 glow-effect">
-                            <i class="fas fa-mobile-alt feature-icon text-2xl"></i>
+                <div class="group relative overflow-hidden rounded-[28px] border border-white/70 bg-white/90 p-8 shadow-[0_20px_70px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_30px_90px_rgba(16,185,129,0.16)] scale-in stagger-animation" style="--stagger: 6;">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-50/80 via-white to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                    <div class="relative">
+                        <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-green-400 text-white shadow-lg shadow-emerald-500/20">
+                            <i class="fas fa-mobile-alt text-2xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Mobile Farm Management</h3>
-                        <p class="text-gray-600 mb-6">Comprehensive mobile app that puts all farm management tools in your pocket, from field mapping to inventory tracking.</p>
-                        <a href="#" class="text-green-500 font-semibold hover:text-green-600 transition-colors ripple">Learn More →</a>
+                        <p class="text-gray-600 mb-6">A smart control center in your pocket for monitoring operations, maps, and inventory.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -703,9 +710,9 @@
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
-                navbar.classList.add('shadow-lg');
+                navbar.classList.add('shadow-lg', 'nav-scrolled');
             } else {
-                navbar.classList.remove('shadow-lg');
+                navbar.classList.remove('shadow-lg', 'nav-scrolled');
             }
         });
 

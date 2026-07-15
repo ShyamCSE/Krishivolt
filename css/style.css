@@ -51,9 +51,30 @@ a {
 }
 
 .nav-glass {
-  backdrop-filter: blur(14px);
-  background: rgba(255, 255, 255, 0.78);
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(18px);
+  background: rgba(15, 23, 42, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-glass a {
+  color: #eff6ff;
+}
+
+.nav-glass span {
+  color: #f8fafc;
+}
+
+.nav-glass.nav-scrolled {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+.nav-glass.nav-scrolled a {
+  color: #334155;
+}
+
+.nav-glass.nav-scrolled span {
+  color: #111827;
 }
 
 #navbar {
