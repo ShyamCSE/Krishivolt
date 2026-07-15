@@ -80,6 +80,7 @@
                 
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-white hover:text-green-300 transition-colors">Home</a>
+                    <a href="our-projects.html" class="text-white hover:text-green-300 transition-colors">Our Projects</a>
                     <a href="solutions.html" class="text-white hover:text-green-300 transition-colors">Solutions</a>
                     <a href="technology.html" class="text-white hover:text-green-300 transition-colors">Technology</a>
                     <a href="about.html" class="text-white hover:text-green-300 transition-colors">About</a>
@@ -97,6 +98,7 @@
         <div id="mobileMenu" class="hidden absolute inset-x-0 top-full bg-slate-950/95 border-t border-white/10 backdrop-blur-xl md:hidden z-40">
             <div class="max-w-7xl mx-auto px-4 py-4 space-y-3">
                 <a href="index.html" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">Home</a>
+                <a href="our-projects.html" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">Our Projects</a>
                 <a href="solutions.html" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">Solutions</a>
                 <a href="#technology" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">Technology</a>
                 <a href="about.html" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">About</a>
@@ -203,7 +205,7 @@
                         </div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Precision Drone Monitoring</h3>
                         <p class="text-gray-600 mb-6">Advanced aerial insights for crop scouting, pest detection, and smarter field decisions in real time.</p>
-                        <a href="#" class="inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" data-modal="precision-drone" class="learn-more inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -215,7 +217,7 @@
                         </div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Smart Irrigation Systems</h3>
                         <p class="text-gray-600 mb-6">IoT-led irrigation that adapts automatically to soil moisture, weather, and crop demand.</p>
-                        <a href="#" class="inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" data-modal="smart-irrigation" class="learn-more inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -227,7 +229,7 @@
                         </div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Predictive Analytics</h3>
                         <p class="text-gray-600 mb-6">Machine learning that turns weather, soil, and crop data into actionable farming guidance.</p>
-                        <a href="#" class="inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" data-modal="predictive-analytics" class="learn-more inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -239,7 +241,7 @@
                         </div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Renewable Energy Solutions</h3>
                         <p class="text-gray-600 mb-6">Sustainable power systems that support irrigation, control, and daily farm operations efficiently.</p>
-                        <a href="#" class="inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" data-modal="renewable-energy" class="learn-more inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -251,7 +253,7 @@
                         </div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Soil Health Analysis</h3>
                         <p class="text-gray-600 mb-6">Comprehensive soil testing and nutrient insights that help improve productivity and sustainability.</p>
-                        <a href="#" class="inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" data-modal="soil-analysis" class="learn-more inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -263,12 +265,30 @@
                         </div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Mobile Farm Management</h3>
                         <p class="text-gray-600 mb-6">A smart control center in your pocket for monitoring operations, maps, and inventory.</p>
-                        <a href="#" class="inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" data-modal="mobile-management" class="learn-more inline-flex items-center gap-2 text-emerald-600 font-semibold transition-colors hover:text-emerald-700 ripple">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <div id="solution-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/60 px-4 py-10">
+        <div class="w-full max-w-3xl overflow-hidden rounded-[32px] bg-white shadow-2xl">
+            <div class="flex items-start justify-between gap-4 border-b border-slate-200 px-6 py-5">
+                <div>
+                    <h3 id="solution-modal-title" class="text-3xl font-bold text-slate-900"></h3>
+                    <p id="solution-modal-subtitle" class="mt-2 text-slate-600"></p>
+                </div>
+                <button id="solution-modal-close" class="rounded-full bg-slate-100 p-3 text-slate-600 transition hover:bg-slate-200" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="px-6 py-6">
+                <p id="solution-modal-description" class="text-slate-700 leading-relaxed"></p>
+                <div id="solution-modal-details" class="mt-6 grid gap-4 sm:grid-cols-2"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- Technology Showcase -->
     <section id="technology" class="py-20 hero-gradient">
@@ -284,51 +304,51 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-8 fade-in-up">
-                    <div class="tech-card rounded-xl p-6">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-12 h-12 bg-green-400 bg-opacity-20 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-brain text-green-300 text-xl"></i>
+                    <div class="rounded-[32px] border border-white/10 bg-slate-950/40 p-7 shadow-2xl shadow-black/20 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="flex items-center gap-4 mb-5">
+                            <div class="w-14 h-14 rounded-3xl bg-emerald-500/15 flex items-center justify-center">
+                                <i class="fas fa-brain text-emerald-300 text-2xl"></i>
                             </div>
                             <h3 class="text-2xl font-bold text-white">Artificial Intelligence</h3>
                         </div>
-                        <p class="text-green-100">Advanced machine learning algorithms that analyze crop patterns, predict yields, and optimize farming decisions in real-time.</p>
+                        <p class="text-green-100 leading-relaxed">Krishivolt's Artificial Intelligence analyzes crop health, weather conditions, soil data, and historical farming patterns to provide intelligent recommendations. AI helps farmers detect diseases early, optimize irrigation schedules, predict yields, and improve productivity while reducing unnecessary input costs.</p>
                     </div>
 
-                    <div class="tech-card rounded-xl p-6">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-12 h-12 bg-green-400 bg-opacity-20 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-network-wired text-green-300 text-xl"></i>
+                    <div class="rounded-[32px] border border-white/10 bg-slate-950/40 p-7 shadow-2xl shadow-black/20 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="flex items-center gap-4 mb-5">
+                            <div class="w-14 h-14 rounded-3xl bg-emerald-500/15 flex items-center justify-center">
+                                <i class="fas fa-network-wired text-emerald-300 text-2xl"></i>
                             </div>
                             <h3 class="text-2xl font-bold text-white">IoT Sensors</h3>
                         </div>
-                        <p class="text-green-100">Network of smart sensors that monitor soil moisture, temperature, humidity, and nutrient levels across your entire farm.</p>
+                        <p class="text-green-100 leading-relaxed">Our IoT-enabled sensors continuously monitor soil moisture, temperature, humidity, nutrient levels, and environmental conditions. The collected data helps automate irrigation, improve fertilizer management, and maintain optimal growing conditions throughout the crop cycle.</p>
                     </div>
 
-                    <div class="tech-card rounded-xl p-6">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-12 h-12 bg-green-400 bg-opacity-20 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-satellite text-green-300 text-xl"></i>
+                    <div class="rounded-[32px] border border-white/10 bg-slate-950/40 p-7 shadow-2xl shadow-black/20 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="flex items-center gap-4 mb-5">
+                            <div class="w-14 h-14 rounded-3xl bg-emerald-500/15 flex items-center justify-center">
+                                <i class="fas fa-satellite text-emerald-300 text-2xl"></i>
                             </div>
                             <h3 class="text-2xl font-bold text-white">Satellite Imaging</h3>
                         </div>
-                        <p class="text-green-100">High-resolution satellite imagery for crop monitoring, field mapping, and early detection of potential issues.</p>
+                        <p class="text-green-100 leading-relaxed">Krishivolt integrates satellite imagery with drone surveillance to provide accurate field mapping, crop monitoring, and early detection of stress, disease, and nutrient deficiencies. Farmers receive actionable insights before problems become visible, reducing crop losses and increasing overall farm efficiency.</p>
                     </div>
                 </div>
 
                 <div class="relative fade-in-up" style="animation-delay: 0.3s;">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <!-- Dashboard Preview -->
-                        <div class="bg-white bg-opacity-10 rounded-2xl backdrop-filter backdrop-blur-sm p-4 overflow-hidden">
-                            <img src="./images/smart-home-management-application/4191343.jpg" alt="Farm Management Dashboard" class="w-full h-48  rounded-lg mb-4">
-                            <h3 class="text-xl font-bold text-white mb-2">Smart Dashboard</h3>
-                            <p class="text-green-100 text-sm">Real-time farm monitoring and analytics</p>
+                        <div class="rounded-[32px] border border-white/10 bg-slate-950/35 p-5 shadow-2xl shadow-black/15 backdrop-blur-xl overflow-hidden transition-all duration-300 hover:-translate-y-2">
+                            <img src="./images/smart-home-management-application/4191343.jpg" alt="Farm Management Dashboard" class="w-full h-48 rounded-3xl object-cover mb-4">
+                            <h3 class="text-xl font-semibold text-white mb-2">Smart Dashboard</h3>
+                            <p class="text-green-100 text-sm leading-relaxed">The Krishivolt Smart Dashboard gives farmers complete visibility into their agricultural operations. From irrigation schedules and crop health to inventory, weather forecasts, and harvest planning, all farm data is available in one centralized platform.</p>
                         </div>
                         
                         <!-- Technology Integration -->
-                        <div class="bg-white bg-opacity-10 rounded-2xl backdrop-filter backdrop-blur-sm p-4 overflow-hidden">
-                            <img src="./images/ai-chip-artificial-intelligence-future-technology-innovation.jpg" alt="Integrated Technology" class="w-full h-48 object-cover rounded-lg mb-4">
-                            <h3 class="text-xl font-bold text-white mb-2">AI Integration</h3>
-                            <p class="text-green-100 text-sm">Machine learning powered insights</p>
+                        <div class="rounded-[32px] border border-white/10 bg-slate-950/35 p-5 shadow-2xl shadow-black/15 backdrop-blur-xl overflow-hidden transition-all duration-300 hover:-translate-y-2">
+                            <img src="./images/ai-chip-artificial-intelligence-future-technology-innovation.jpg" alt="Integrated Technology" class="w-full h-48 object-cover rounded-3xl mb-4">
+                            <h3 class="text-xl font-semibold text-white mb-2">AI Integration</h3>
+                            <p class="text-green-100 text-sm leading-relaxed">Krishivolt connects Artificial Intelligence, IoT devices, drones, satellite imagery, and predictive analytics into one intelligent ecosystem. This integrated approach enables precision farming, improves operational efficiency, reduces production costs, and supports sustainable agriculture for long-term success.</p>
                         </div>
                     </div>
                 </div>
@@ -823,6 +843,130 @@
             document.querySelectorAll('.card-3d').forEach(card => {
                 card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
             });
+        });
+
+        const solutionModalData = {
+            'precision-drone': {
+                title: 'Precision Drone Monitoring',
+                subtitle: 'Aerial intelligence for smarter crop decisions',
+                description: 'Krishivolt uses AI-powered drone technology to monitor crop health, detect pests and diseases early, and assess plant growth across multilayer farming systems. High-resolution aerial imaging helps farmers identify stressed crops before visible damage occurs, reducing input costs and improving yields. Our drone monitoring supports precision agriculture by enabling targeted spraying, crop mapping, and real-time field analysis, making farming more efficient, sustainable, and profitable.',
+                details: [
+                    'Early pest & disease detection',
+                    'High-resolution crop monitoring',
+                    'Reduced pesticide usage',
+                    'Better yield prediction',
+                    'Lower farming costs',
+                ],
+            },
+            'smart-irrigation': {
+                title: 'Smart Irrigation Systems',
+                subtitle: 'Water efficiency powered by sensor automation',
+                description: 'Water is one of agricultures most valuable resources. Krishivolt Smart Irrigation System uses IoT sensors, weather forecasting, and soil moisture analysis to deliver the right amount of water at the right time. This intelligent irrigation solution reduces water wastage, saves electricity, improves crop health, and increases farm productivity.',
+                details: [
+                    'Up to 50% water savings',
+                    'Automatic irrigation scheduling',
+                    'Lower electricity consumption',
+                    'Improved crop growth',
+                    'Climate-smart farming'
+                ],
+            },
+            'predictive-analytics': {
+                title: 'Predictive Analytics',
+                subtitle: 'Data-driven guidance for every season',
+                description: 'Krishivolt transforms agricultural data into actionable decisions using Artificial Intelligence and Machine Learning. Weather forecasts, soil conditions, crop growth patterns, and historical farming data are analyzed to provide timely recommendations. Farmers receive insights on irrigation schedules, fertilizer planning, pest risks, and harvest timing, reducing uncertainty and increasing profitability.Benefits AI-based crop recommendations',
+                details: [
+                    'Weather forecasting',
+                    'Disease prediction',
+                    'Harvest optimization',
+                    'Better farm planning',
+                ],
+            },
+            'renewable-energy': {
+                title: 'Renewable Energy Solutions',
+                subtitle: 'Sustainable power for farm automation',
+                description: 'Krishivolt promotes clean energy solutions that reduce farming costs while protecting the environment. Solar-powered irrigation systems, smart pumps, and renewable energy infrastructure help farmers become energy independent.These sustainable technologies lower electricity expenses, reduce carbon emissions, and improve long-term profitability.',
+                details: [
+                    'Solar irrigation',
+                    'Reduced electricity bills',
+                    'Eco-friendly farming',
+                    'Sustainable agriculture',
+                    'Carbon footprint reduction',
+                ],
+            },
+            'soil-analysis': {
+                title: 'Soil Health Analysis',
+                subtitle: 'Nutrient and moisture insights that improve yields',
+                description: 'Carbon footprint reduction',
+                details: [
+                    'Soil nutrient profiling and pH monitoring',
+                    'Recommendations for fertilizers and amendments',
+                    'Long-term soil health tracking and reporting',
+                ],
+            },
+            'mobile-management': {
+                title: 'Mobile Farm Management',
+                subtitle: 'Your farm control center in the palm of your hand',
+                description: 'The Krishivolt Mobile Platform gives farmers complete control over their farming operations from anywhere. Users can monitor crops, manage inventory, track orders, access weather forecasts, monitor drone reports, and connect directly with buyers.Our mobile ecosystem simplifies farm management while improving transparency and operational efficiency.',
+                details: [
+                    'Live dashboards for field conditions and farm assets',
+                    'Remote control of irrigation and monitoring systems',
+                    'Instant notifications for critical events and alerts',
+                ],
+            },
+        };
+
+        function openSolutionModal(key) {
+            const modal = document.getElementById('solution-modal');
+            const data = solutionModalData[key];
+            if (!modal || !data) return;
+
+            document.getElementById('solution-modal-title').textContent = data.title;
+            document.getElementById('solution-modal-subtitle').textContent = data.subtitle;
+            document.getElementById('solution-modal-description').textContent = data.description;
+
+            const detailsContainer = document.getElementById('solution-modal-details');
+            detailsContainer.innerHTML = data.details.map(item => `
+                <div class="rounded-3xl border border-slate-200 bg-slate-50 p-4">
+                    <p class="font-semibold text-slate-900">${item}</p>
+                </div>
+            `).join('');
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeSolutionModal() {
+            const modal = document.getElementById('solution-modal');
+            if (!modal) return;
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        document.querySelectorAll('[data-modal]').forEach(button => {
+            button.addEventListener('click', event => {
+                event.preventDefault();
+                openSolutionModal(button.dataset.modal);
+            });
+        });
+
+        const modalCloseButton = document.getElementById('solution-modal-close');
+        if (modalCloseButton) {
+            modalCloseButton.addEventListener('click', closeSolutionModal);
+        }
+
+        const modalOverlay = document.getElementById('solution-modal');
+        if (modalOverlay) {
+            modalOverlay.addEventListener('click', event => {
+                if (event.target === modalOverlay) {
+                    closeSolutionModal();
+                }
+            });
+        }
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+                closeSolutionModal();
+            }
         });
 
         // Smooth reveal animations with better timing
