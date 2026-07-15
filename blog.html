@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Krishivolt</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.12),_transparent_26%),radial-gradient(circle_at_20%_10%,_rgba(16,185,129,0.08),_transparent_26%),#f8fafc]">
+  <nav class="fixed top-0 w-full z-50 nav-glass shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-3">
+          <img src="./images/logo.webp" alt="Krishivolt logo" class="logo rounded-lg">
+          <span class="text-lg font-bold text-gray-900">Krishivolt</span>
+        </div>
+        <div class="hidden md:flex items-center gap-8 text-gray-700">
+           <a href="index.html" class="text-gray-700 hover:text-green-500 transition-colors">Home</a>
+                    <a href="#solutions" class="text-gray-700 hover:text-green-500 transition-colors">Solutions</a>
+                    <a href="#technology" class="text-gray-700 hover:text-green-500 transition-colors">Technology</a>
+                    <a href="about.html" class="text-gray-700 hover:text-green-500 transition-colors">About</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-green-500 transition-colors">Gallery</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-green-500 transition-colors">Contact</a>
+                     <a href="blog.html" class="text-gray-700 hover:text-green-500 transition-colors">Blogs</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-24">
+    <section class="hero-gradient relative overflow-hidden py-24">
+      <div class="absolute inset-0 bg-[radial-gradient(circle,_rgba(255,255,255,0.08),_transparent_45%)]"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-white text-center space-y-6">
+          <p class="text-sm uppercase tracking-[0.3em] text-green-200">Latest insights</p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">Krishivolt Blog</h1>
+          <p class="max-w-3xl mx-auto text-lg text-green-100">Explore smart farming stories, sustainable agriculture research, and actionable ideas for modern farms.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-8 lg:grid-cols-2">
+          <article class="group rounded-[32px] border border-slate-200 bg-slate-50 p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+            <a href="blog-post-1.html" class="inline-block text-sm font-semibold text-green-600 mb-4">Precision Farming</a>
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">How AI is reshaping precision farming</h2>
+            <p class="text-slate-600 mb-6">Discover how machine learning and sensors help farmers automate decisions and maximize yield per acre.</p>
+            <div class="flex items-center justify-between text-sm text-slate-500">
+              <span>April 18, 2025</span>
+              <span>4 min read</span>
+            </div>
+          </article>
+
+          <article class="group rounded-[32px] border border-slate-200 bg-slate-50 p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+            <a href="blog-post-2.html" class="inline-block text-sm font-semibold text-green-600 mb-4">Water Efficiency</a>
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">Smart irrigation for sustainable yields</h2>
+            <p class="text-slate-600 mb-6">Read about the irrigation strategies that cut water use while improving crop health and profitability.</p>
+            <div class="flex items-center justify-between text-sm text-slate-500">
+              <span>May 2, 2025</span>
+              <span>5 min read</span>
+            </div>
+          </article>
+
+          <article class="group rounded-[32px] border border-slate-200 bg-slate-50 p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+            <a href="blog-post-3.html" class="inline-block text-sm font-semibold text-green-600 mb-4">Renewable Energy</a>
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">Powering farms with renewable energy</h2>
+            <p class="text-slate-600 mb-6">Learn how solar and wind integrations create resilient, low-cost energy systems for farms.</p>
+            <div class="flex items-center justify-between text-sm text-slate-500">
+              <span>June 10, 2025</span>
+              <span>4 min read</span>
+            </div>
+          </article>
+
+          <article class="group rounded-[32px] border border-slate-200 bg-slate-50 p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+            <a href="blog-post-4.html" class="inline-block text-sm font-semibold text-green-600 mb-4">Soil Analytics</a>
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">Soil health analytics for better harvests</h2>
+            <p class="text-slate-600 mb-6">Understand the tools that help farmers monitor soil nutrients, moisture, and long-term land health.</p>
+            <div class="flex items-center justify-between text-sm text-slate-500">
+              <span>July 5, 2025</span>
+              <span>6 min read</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-950 text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-sm text-slate-400">&copy; 2025 Krishivolt. Empowering farmers with sustainable technology.</p>
+    </div>
+  </footer>
+</body>
+</html>
