@@ -89,24 +89,32 @@
                     <a href="blog.html" class="text-white hover:text-green-300 transition-colors">Blogs</a>
                 </div>
 
-                <button id="mobileMenuToggle" class="md:hidden text-white border border-white/20 rounded-full p-3 hover:bg-white/10 transition">
-                    <i class="fas fa-bars"></i>
-                </button>
+                                <button id="mobile-menu-button" class="mobile-hamburger md:hidden text-white border border-white/20 rounded-full p-3 hover:bg-white/10 transition" aria-label="Open menu">
+                                        <i class="fas fa-bars"></i>
+                                </button>
             </div>
         </div>
-
-        <div id="mobileMenu" class="hidden absolute inset-x-0 top-full bg-slate-950/95 border-t border-white/10 backdrop-blur-xl md:hidden z-40">
-            <div class="max-w-7xl mx-auto px-4 py-4 space-y-3">
-                <a href="index.html" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">Home</a>
-                <a href="our-projects.html" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">Our Projects</a>
-                <a href="solutions.html" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">Solutions</a>
-                <a href="#technology" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">Technology</a>
-                <a href="about.html" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">About</a>
-                <a href="gallery.html" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">Gallery</a>
-                <a href="contact.html" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">Contact</a>
-                <a href="blog.html" class="block text-white py-3 px-4 rounded-xl hover:bg-white/10">Blogs</a>
-            </div>
-        </div>
+                <!-- Mobile menu overlay + panel -->
+                <div id="mobile-menu-overlay" class="mobile-menu-overlay" aria-hidden="true"></div>
+                <aside id="mobile-menu" class="mobile-menu" aria-hidden="true">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center gap-3">
+                            <img src="./images/logo.webp" alt="Krishivolt" class="logo" style="max-width:48px">
+                            <span class="font-bold">Krishivolt</span>
+                        </div>
+                        <button id="mobile-menu-close" class="close-btn" aria-label="Close menu"><i class="fas fa-times"></i></button>
+                    </div>
+                    <nav>
+                        <a href="index.html">Home</a>
+                        <a href="our-projects.html">Our Projects</a>
+                        <a href="solutions.html">Solutions</a>
+                        <a href="technology.html">Technology</a>
+                        <a href="about.html">About</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="blog.html">Blogs</a>
+                    </nav>
+                </aside>
     </nav>
 
     <!-- Hero Section -->
@@ -1000,4 +1008,5 @@
 
     
 </body>
+<script src="js/navbar.js"></script>
 </html>

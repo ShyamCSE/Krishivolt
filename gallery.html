@@ -27,9 +27,37 @@
           <a href="contact.html" class="text-gray-700 hover:text-green-500 transition-colors">Contact</a>
           <a href="blog.html" class="text-gray-700 hover:text-green-500 transition-colors">Blogs</a>
         </div>
+        <!-- mobile hamburger -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="mobile-hamburger" aria-label="Open menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
       </div>
     </div>
   </nav>
+
+  <!-- Mobile menu overlay + panel -->
+  <div id="mobile-menu-overlay" class="mobile-menu-overlay" aria-hidden="true"></div>
+  <aside id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <div class="flex items-center justify-between mb-6">
+      <div class="flex items-center gap-3">
+        <img src="./images/logo.webp" alt="Krishivolt" class="logo" style="max-width:48px">
+        <span class="font-bold">Krishivolt</span>
+      </div>
+      <button id="mobile-menu-close" class="close-btn" aria-label="Close menu"><i class="fas fa-times"></i></button>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="our-projects.html">Our Projects</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="technology.html">Technology</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blogs</a>
+    </nav>
+  </aside>
 
   <main class="">
     <section class="hero-gradient relative overflow-hidden py-24">
@@ -107,4 +135,5 @@
     </div>
   </footer>
 </body>
+<script src="js/navbar.js"></script>
 </html>
