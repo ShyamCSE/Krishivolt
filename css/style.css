@@ -442,10 +442,80 @@ textarea:focus {
   .hero-gradient .text-7xl { font-size: 4rem; }
 }
 
+@media (max-width: 1024px) {
+  .hero-gradient .text-5xl { font-size: 3rem; }
+  .hero-gradient .text-7xl { font-size: 4rem; }
+  .max-w-6xl,
+  .max-w-7xl {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
 @media (max-width: 768px) {
-  .hero-gradient { padding-top: 4rem; }
-  .hero-gradient h1 { font-size: 2.75rem; }
-  .hero-gradient p { font-size: 1.05rem; }
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  body {
+    min-height: 100vh;
+    padding-top: 4.5rem;
+    line-height: 1.6;
+  }
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  h1 {
+    font-size: clamp(2.1rem, 5vw, 2.5rem);
+  }
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+  p,
+  li {
+    font-size: 1rem;
+  }
+  .hero-gradient {
+    padding-top: 4.5rem;
+  }
+  .hero-gradient h1 {
+    font-size: 2.5rem;
+    line-height: 1.18;
+  }
+  .hero-gradient p {
+    font-size: 1rem;
+  }
+  .hero-gradient .max-w-2xl,
+  .max-w-3xl,
+  .max-w-6xl,
+  .max-w-7xl {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .grid {
+    gap: 1rem;
+  }
+  .rounded-[40px],
+  .rounded-[32px],
+  .rounded-3xl,
+  .rounded-[36px] {
+    border-radius: 20px;
+  }
+  .mobile-menu {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+  .mobile-menu nav a {
+    font-size: 1rem;
+    padding: 0.85rem 0.5rem;
+  }
+  .mobile-menu .close-btn {
+    font-size: 1.4rem;
+  }
 }
 
 /* Mobile right-side popup menu */
